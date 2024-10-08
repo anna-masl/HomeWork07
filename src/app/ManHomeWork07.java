@@ -11,10 +11,10 @@ public class ManHomeWork07 {
     public static void main(String[] args) {
 
         Random random = new Random();
-        int[] array = new int[10];
+        int[] array = new int[20];
 
         for (int index = 0; index < array.length; index++) {
-            array[index] = random.nextInt(20) - 10;
+            array[index] = random.nextInt(201) - 100;
             if (array[index] < 0) {
                 sum += array[index];
             }
@@ -44,18 +44,22 @@ public class ManHomeWork07 {
         System.out.println("Найменший елемент: " + minvalue + " (з індексом " + keyminvalue + ")");
         System.out.println("Найбільший елемент: " + maxvalue + " (з індексом " + keymaxvalue + ")");
         for (int index = 0; index < array.length; index++) {
-            if (array[index]<0){
+
+            if (array[index] < 0) {
                 System.out.println(index);
-                int qvt = array.length - index -1;
+                int qvt = array.length - index - 1;
                 System.out.println(qvt);
                 int sumarray = 0;
-                for (int i = index+1; i < array.length; i++) {
-                    sumarray +=array[i];
+                for (int i = index + 1; i < array.length; i++) {
+                    sumarray += array[i];
                 }
                 System.out.println(sumarray);
-                double avg = sumarray/(double)qvt;
+                double avg = sumarray / (double) qvt;
                 System.out.println(avg);
+                System.out.printf("Середнє арифметичне чисел після першого від'ємного числа: %.2f",avg);
                 break;
+            } else if (index == array.length -1) {
+                System.out.println("Від'ємних чисел немає");
             }
         }
 
