@@ -11,10 +11,10 @@ public class ManHomeWork07 {
     public static void main(String[] args) {
 
         Random random = new Random();
-        int[] array = new int[20];
+        int[] array = new int[10];
 
         for (int index = 0; index < array.length; index++) {
-            array[index] = random.nextInt(201) - 100;
+            array[index] = random.nextInt(20) - 10;
             if (array[index] < 0) {
                 sum += array[index];
             }
@@ -28,7 +28,6 @@ public class ManHomeWork07 {
         System.out.println("Сума від'ємних чисел: " + sum);
 
         for (int index = 0; index < array.length; index++) {
-
             if (array[index] % 2 == 0) {
                 counteven++;
             } else countodd++;
@@ -40,18 +39,25 @@ public class ManHomeWork07 {
                 keyminvalue = index;
             }
         }
-
         System.out.println("Кількість парних чисел: " + counteven);
         System.out.println("Кількість непарних чисел: " + countodd);
         System.out.println("Найменший елемент: " + minvalue + " (з індексом " + keyminvalue + ")");
         System.out.println("Найбільший елемент: " + maxvalue + " (з індексом " + keymaxvalue + ")");
-//        for (int i = 0; i < array.length; i++) {
-//            if (array[i] < 0) {
-//                System.out.println(i);
-//                break;
-//            } else System.out.println("Від'ємних чисел немає");
-//            break;
+        for (int index = 0; index < array.length; index++) {
+            if (array[index]<0){
+                System.out.println(index);
+                int qvt = array.length - index -1;
+                System.out.println(qvt);
+                int sumarray = 0;
+                for (int i = index+1; i < array.length; i++) {
+                    sumarray +=array[i];
+                }
+                System.out.println(sumarray);
+                double avg = sumarray/(double)qvt;
+                System.out.println(avg);
+                break;
+            }
+        }
 
     }
 }
-
