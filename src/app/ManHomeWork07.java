@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.Random;
 
 public class ManHomeWork07 {
-    static int sum;
+//    static int sum;
     static int counteven;
     static int countodd;
 
@@ -12,6 +12,7 @@ public class ManHomeWork07 {
 
         Random random = new Random();
         int[] array = new int[20];
+        int sum = 0;
 
         for (int index = 0; index < array.length; index++) {
             array[index] = random.nextInt(201) - 100;
@@ -24,7 +25,7 @@ public class ManHomeWork07 {
         int keymaxvalue = 0;
         int keyminvalue = 0;
 
-        System.out.println(Arrays.toString(array));
+        System.out.println("Елементи масиву: " + Arrays.toString(array));
         System.out.println("Сума від'ємних чисел: " + sum);
 
         for (int index = 0; index < array.length; index++) {
@@ -46,16 +47,16 @@ public class ManHomeWork07 {
         for (int index = 0; index < array.length; index++) {
 
             if (array[index] < 0) {
-                System.out.println(index);
+//                System.out.println(index);
                 int qvt = array.length - index - 1;
-                System.out.println(qvt);
+//                System.out.println(qvt);
                 int sumarray = 0;
                 for (int i = index + 1; i < array.length; i++) {
                     sumarray += array[i];
                 }
-                System.out.println(sumarray);
+//                System.out.println(sumarray);
                 double avg = sumarray / (double) qvt;
-                System.out.println(avg);
+//                System.out.println(avg);
                 System.out.printf("Середнє арифметичне чисел після першого від'ємного числа: %.2f",avg);
                 break;
             } else if (index == array.length -1) {
