@@ -4,7 +4,6 @@ import java.util.Arrays;
 import java.util.Random;
 
 public class ManHomeWork07 {
-//    static int sum;
     static int counteven;
     static int countodd;
 
